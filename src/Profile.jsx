@@ -1,10 +1,15 @@
 import { getImageUrl } from './utils.js';
 
 function Avatar({ person, size }) {
+    let thumbnail = 's';
+    if (size > 90) {
+        thumbnail = 'b';
+    }
+
     return (
         <img
             className="avatar"
-            src={getImageUrl(person, 's')}
+            src={getImageUrl(person, thumbnail)}
             alt={person.name}
             width={size}
             height={size}
