@@ -1,8 +1,10 @@
 import { getImageUrl } from './utils.js';
 
+const ratio = window.devicePixelRatio;
+
 function Avatar({ person, size }) {
     let thumbnail = 's';
-    if (size > 90) {
+    if (size * ratio > 90) {
         thumbnail = 'b';
     }
 
