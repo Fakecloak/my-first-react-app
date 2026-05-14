@@ -50,3 +50,15 @@ ul {
     margin: 20px;
     border-radius: 50%;
 }
+
+.card {
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid red;
+    padding: 20px;
+    margin: 20px;
+}
+
+.card-content {
+    text-align: center;
+}
