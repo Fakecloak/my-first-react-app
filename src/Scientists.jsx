@@ -1,7 +1,7 @@
 import { getImageUrl } from "./utils.js";
 import { people } from "./sci_data.js";
 
-function ListItems({ title, people }) {
+export function ListItems({ title, people }) {
     return (
         <>
             <h2> {title} </h2>
