@@ -9,6 +9,7 @@ import RecipeList from './RecipeList.jsx'
 import Poem from './Poem.jsx'
 import Gallery from './Gallery.jsx'
 import Form from './Forms.jsx'
+import BgChanger from './bg_changing.jsx'
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
       {/* <RecipeList /> */}
       {/* <Poem /> */}
       {/* <Gallery /> */}
-      <Form />
+      {/* <Form /> */}
+      <BgChanger />
     </>
   )
 }
