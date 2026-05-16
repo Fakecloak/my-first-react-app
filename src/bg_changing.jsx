@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const COLORS = ["pink", "green", "blue", "yellow", "purple"];
 
-export default function BgChanger() {
+export default function BgChanger() { 
+    
+    const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
 
   const onButtonClick = (color) => () => {
 
