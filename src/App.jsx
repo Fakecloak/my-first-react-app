@@ -7,14 +7,16 @@ import Profile from './Profile.jsx'
 import List from './Scientists.jsx'
 import RecipeList from './RecipeList.jsx'
 import Poem from './Poem.jsx'
+import Gallery from './Gallery.jsx'
 
 function App() {
   return (
     <>
-      <Profile />
-      <List />
-      <RecipeList />
-      <Poem />
+      {/* <Profile /> */}
+      {/* <List /> */}
+      {/* <RecipeList /> */}
+      {/* <Poem /> */}
+      <Gallery />
     </>
   )
 }
