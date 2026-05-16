@@ -8,6 +8,7 @@ import List from './Scientists.jsx'
 import RecipeList from './RecipeList.jsx'
 import Poem from './Poem.jsx'
 import Gallery from './Gallery.jsx'
+import Form from './Forms.jsx'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <List /> */}
       {/* <RecipeList /> */}
       {/* <Poem /> */}
-      <Gallery />
+      {/* <Gallery /> */}
+      <Form />
     </>
   )
 }
