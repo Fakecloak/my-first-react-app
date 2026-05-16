@@ -6,6 +6,7 @@ export default function Gallery() {
   const [showMore, setShowMore] = useState(false);
 
   function handleNextClick() {
+    if (index === sculptureList.length - 1) return;
     setIndex(index + 1);
   }
 
@@ -14,6 +15,7 @@ export default function Gallery() {
   }
 
   function handlePreviousClick() {
+    if (index === 0) return;
     setIndex(index - 1);
   }
 
