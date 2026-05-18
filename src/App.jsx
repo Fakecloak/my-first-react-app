@@ -10,6 +10,7 @@ import Poem from './Poem.jsx'
 import Gallery from './Gallery.jsx'
 import Form from './Forms.jsx'
 import BgChanger from './bg_changing.jsx'
+import SyncedInputs from './Synced_inputs.jsx'
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <Poem /> */}
       {/* <Gallery /> */}
       {/* <Form /> */}
-      <BgChanger />
+      {/* <BgChanger /> */}
+      <SyncedInputs />
     </>
   )
 }
