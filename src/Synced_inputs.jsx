@@ -6,6 +6,7 @@ export default function SyncedInputs() {
   function handleChange(e) {
     setText(e.target.value);
   }
+  
   return (
     <>
       <Input label="First input" onChange={handleChange} value={text} />

@@ -2,6 +2,15 @@ import { useState } from 'react';
 import { foods, filterItems } from './foodData.js';
 
 export default function FilterableList() {
+
+    const [query, setQuery] = useState('');
+
+  function handleChange(e) {
+    setQuery(e.target.value);
+  }
+  
+
+
   return (
     <>
       <SearchBar />
@@ -12,11 +21,7 @@ export default function FilterableList() {
 }
 
 function SearchBar() {
-  const [query, setQuery] = useState('');
-
-  function handleChange(e) {
-    setQuery(e.target.value);
-  }
+  
 
   return (
     <label>
