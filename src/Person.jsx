@@ -8,8 +8,13 @@ export default function Person(){
         setPerson( {...person, age: person.age +1});
     };
 
+    const handleNameChange = (e) => {
+        setPerson( {...person, name: e.target.value});
+    }
+
     return (
         <>
+        <input type="text" value={person.name} placeholder="Enter full name" onChange={handleNameChange}/>
         <h1>{person.name}</h1>
         <h2>{person.age}</h2>
         <button onClick={handleIncreaseAge}>Increase Age</button>
