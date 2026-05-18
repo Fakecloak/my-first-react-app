@@ -8,27 +8,28 @@ export default function FilterableList() {
   function handleChange(e) {
     setQuery(e.target.value);
   }
-  
+
+  const results = filterItems(foods, query)
 
 
   return (
     <>
-      <SearchBar />
+      <SearchBar query={query} onChange={handleChange}/>
       <hr />
-      <List items={foods} />
+      <List items={results} />
     </>
   );
 }
 
-function SearchBar() {
+function SearchBar(props) {
   
 
   return (
     <label>
       Search:{' '}
       <input
-        value={query}
-        onChange={handleChange}
+        value={props.query}
+        onChange={props.onChange}
       />
     </label>
   );

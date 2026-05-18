@@ -11,6 +11,7 @@ import Gallery from './Gallery.jsx'
 import Form from './Forms.jsx'
 import BgChanger from './bg_changing.jsx'
 import SyncedInputs from './Synced_inputs.jsx'
+import FilterableList from './FilteringList.jsx'
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
       {/* <Gallery /> */}
       {/* <Form /> */}
       {/* <BgChanger /> */}
-      <SyncedInputs />
+      {/* <SyncedInputs /> */}
+      <FilterableList />
     </>
   )
 }
