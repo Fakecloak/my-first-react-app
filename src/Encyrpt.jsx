@@ -26,12 +26,14 @@ function createUnencryptedConnection(roomId) {
 }
 
 
-function ChatRoom({ roomId, createConnection }) {
+function ChatRoom({ roomId, isEncrypted }) {
   useEffect(() => {
+    const createConnection = isEncrypted ? createEncryptedConnection : createUnencryptedConnection;
+
     const connection = createConnection(roomId);
     connection.connect();
     return () => connection.disconnect();
-  }, [roomId, createConnection]);
+  }, [roomId, isEncrypted]);
 
   return <h1>Welcome to the {roomId} room!</h1>;
 }
@@ -64,10 +66,7 @@ export default function Encyrpt() {
       <hr />
       <ChatRoom
         roomId={roomId}
-        createConnection={isEncrypted ?
-          createEncryptedConnection :
-          createUnencryptedConnection
-        }
+        isEncrypted={isEncrypted}
       />
     </>
   );
