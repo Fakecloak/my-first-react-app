@@ -34,7 +34,8 @@ function App() {
       {/* <Clock /> */}
       {/* <ChatRoom /> */}
       {/* <Pointer /> */}
-      <Encyrpt />
+      {/* <Encyrpt />*/}
+      < Planets />
     </>
   )
 }
