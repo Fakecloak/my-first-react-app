@@ -16,6 +16,7 @@ import Person from './Person.jsx'
 import Clock from './Clock.jsx'
 import ChatRoom from './ChatRoom.jsx'
 import Pointer from './Pointer.jsx'
+import Encyrpt from './Encyrpt.jsx'
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
       {/* <Person /> */}
       {/* <Clock /> */}
       {/* <ChatRoom /> */}
-      <Pointer />
+      {/* <Pointer /> */}
+      <Encyrpt />
     </>
   )
 }
