@@ -14,6 +14,8 @@ import SyncedInputs from './Synced_inputs.jsx'
 import FilterableList from './FilteringList.jsx'
 import Person from './Person.jsx'
 import Clock from './Clock.jsx'
+import ChatRoom from './ChatRoom.jsx'
+
 function App() {
   return (
     <>
@@ -27,7 +29,8 @@ function App() {
       {/* <SyncedInputs /> */}
       {/* <FilterableList /> */}
       {/* <Person /> */}
-      <Clock />
+      {/* <Clock /> */}
+      <ChatRoom />
     </>
   )
 }
