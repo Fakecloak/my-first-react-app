@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 
-export default function Pointer() {
+export default function App() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [canMove, setCanMove] = useState(true);
 
   useEffect(() => {
     function handleMove(e) {
-      setPosition({ x: e.clientX, y: e.clientY });
+      if (canMove) {
+        setPosition({ x: e.clientX, y: e.clientY });
+      }
     }
     window.addEventListener('pointermove', handleMove);
     return () => window.removeEventListener('pointermove', handleMove);
-  }, []);
+  }, [canMove]);
 
   return (
     <>
