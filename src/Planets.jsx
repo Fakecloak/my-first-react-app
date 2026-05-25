@@ -22,6 +22,26 @@ export default function Planets() {
     }
   }, []);
 
+  useEffect(() => {
+    if (planetId === '') {
+      // Nothing is selected in the first box yet
+      return;
+    }
+    
+    let ignore = false;
+    fetchData('/planets/' + planetId + '/places').then(result => {
+      if (!ignore) {
+        console.log("Fetched a list of places for planet ");
+        setPlaceList(result);
+        setPlaceId(result[0].id); // Select the first place
+      }
+    });
+    return () => {
+      ignore = true;
+    }
+
+    },[planetId]);
+
   return (
     <>
       <label>
