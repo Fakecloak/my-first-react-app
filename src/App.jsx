@@ -19,6 +19,9 @@ import Pointer from './Pointer.jsx'
 import Encyrpt from './Encyrpt.jsx'
 import Planets from './Planets.jsx'
 import TodoList from './TodoList.jsx'
+import TodoList2 from './TodList2.jsx'
+
+
 function App() {
   return (
     <>
@@ -37,7 +40,8 @@ function App() {
       {/* <Pointer /> */}
       {/* <Encyrpt />*/}
       {/* < Planets /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <TodoList2 />
     </>
   )
 }
