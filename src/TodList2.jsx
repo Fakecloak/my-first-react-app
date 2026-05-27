@@ -1,11 +1,14 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { initialTodos, createTodo, getVisibleTodos } from './todos.js';
 
 export default function TodoList() {
   const [todos, setTodos] = useState(initialTodos);
   const [showActive, setShowActive] = useState(false);
   const [text, setText] = useState('');
-  const visibleTodos = useMemo(() => getVisibleTodos(todos, showActive), [todos, showActive]);
+  const visibleTodos = useMemo(
+    () => getVisibleTodos(todos, showActive),
+    [todos, showActive]
+  );
 
   function handleAddClick() {
     setText('');
