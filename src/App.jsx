@@ -21,6 +21,7 @@ import Planets from './Planets.jsx'
 import TodoList from './TodoList.jsx'
 import TodoList2 from './TodList2.jsx'
 import EditContact from './EditContact.jsx'
+import Form from './Form.jsx'
 
 function App() {
   return (
@@ -42,7 +43,9 @@ function App() {
       {/* < Planets /> */}
       {/* <TodoList /> */}
       {/* <TodoList2 /> */}
-      <EditContact />
+      {/* <EditContact /> // error because of missing props, but I want to keep it for now  */}
+      <Form />
+      
     </>
   )
 }
