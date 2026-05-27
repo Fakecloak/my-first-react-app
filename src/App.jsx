@@ -18,7 +18,7 @@ import ChatRoom from './ChatRoom.jsx'
 import Pointer from './Pointer.jsx'
 import Encyrpt from './Encyrpt.jsx'
 import Planets from './Planets.jsx'
-
+import TodoList from './TodoList.jsx'
 function App() {
   return (
     <>
@@ -36,7 +36,8 @@ function App() {
       {/* <ChatRoom /> */}
       {/* <Pointer /> */}
       {/* <Encyrpt />*/}
-      < Planets />
+      {/* < Planets /> */}
+      <TodoList />
     </>
   )
 }
