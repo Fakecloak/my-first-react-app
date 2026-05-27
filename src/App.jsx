@@ -20,7 +20,7 @@ import Encyrpt from './Encyrpt.jsx'
 import Planets from './Planets.jsx'
 import TodoList from './TodoList.jsx'
 import TodoList2 from './TodList2.jsx'
-
+import EditContact from './EditContact.jsx'
 
 function App() {
   return (
@@ -41,7 +41,8 @@ function App() {
       {/* <Encyrpt />*/}
       {/* < Planets /> */}
       {/* <TodoList /> */}
-      <TodoList2 />
+      {/* <TodoList2 /> */}
+      <EditContact />
     </>
   )
 }
