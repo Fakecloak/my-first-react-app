@@ -8,7 +8,7 @@ import List from './Scientists.jsx'
 import RecipeList from './RecipeList.jsx'
 import Poem from './Poem.jsx'
 import Gallery from './Gallery.jsx'
-import Form from './Forms.jsx'
+import Forms from './Forms.jsx'
 import BgChanger from './bg_changing.jsx'
 import SyncedInputs from './Synced_inputs.jsx'
 import FilterableList from './FilteringList.jsx'
@@ -22,6 +22,7 @@ import TodoList from './TodoList.jsx'
 import TodoList2 from './TodList2.jsx'
 import EditContact from './EditContact.jsx'
 import Form from './Form.jsx'
+import ClassInput from './ClassInput.jsx'
 
 function App() {
   return (
@@ -44,7 +45,8 @@ function App() {
       {/* <TodoList /> */}
       {/* <TodoList2 /> */}
       {/* <EditContact /> // error because of missing props, but I want to keep it for now  */}
-      <Form />
+      {/* <Form /> */}
+      <ClassInput name="Class Input" />
       
     </>
   )
