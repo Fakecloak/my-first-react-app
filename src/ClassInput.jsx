@@ -15,6 +15,7 @@ class ClassInput extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.handleEditChange = this.handleEditChange.bind(this);
   }
 
   handleInputChange(e) {
@@ -49,13 +50,31 @@ class ClassInput extends Component {
     const updatedTodos = this.state.todos.map( 
       (todo, currentIndex) => {
         if (currentIndex === indexToEdit) {
-          return { ...todo, isEditing: !todo.isEditing };
+          return ({ 
+            ...todo, 
+            isEditing: !todo.isEditing });
         }
         return todo;
       }
     );
 
     this.setState({ todos: updatedTodos });
+  }
+
+  handleEditChange(e, indexToEdit) {
+
+    const updatedTodos = this.state.todos.map(
+      (todo, currentIndex) => {
+        if(currentIndex === indexToEdit) {
+          return ({ 
+            ...todo,
+             text: e.target.value
+         });
+        }
+        return todo;
+      }
+    )
+    this.setState({todos: updatedTodos});
   }
 
   render() {
@@ -78,7 +97,7 @@ class ClassInput extends Component {
           {this.state.todos.map((todo,index) => (
             <li key={index}>
               {todo.isEditing ? (
-                <input type="text" value={todo.text} />
+                <input type="text" value={todo.text} onChange={(e) => this.handleEditChange(e, index)} />
 
               ): (
                 <span>{todo.text}</span>
