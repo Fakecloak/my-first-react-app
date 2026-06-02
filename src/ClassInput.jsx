@@ -31,9 +31,15 @@ class ClassInput extends Component {
     }));
   }
 
-  handleDelete(todo) {
+  // handleDelete(todo) {
+  //   this.setState((state) => ({
+  //     todos: state.todos.filter((currentTodo) => currentTodo !== todo)
+  //   }))
+  // }
+
+  handleDelete(index) {
     this.setState((state) => ({
-      todos: state.todos.filter((currentTodo) => currentTodo !== todo)
+      todos:state.todos.filter( (currentTodo, currentIndex) => currentIndex !== index )
     }))
   }
 
@@ -54,10 +60,10 @@ class ClassInput extends Component {
         </form>
         <h4>All the tasks!</h4>
         <ul>
-          {this.state.todos.map((todo) => (
-            <li key={todo}>
+          {this.state.todos.map((todo,index) => (
+            <li key={index}>
               {todo}
-              <button className="delete-btn" onClick={() => this.handleDelete(todo)}>
+              <button className="delete-btn" onClick={() => this.handleDelete(index)}>
                 Delete
               </button>
             </li>           
