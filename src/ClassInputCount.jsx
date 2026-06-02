@@ -1,4 +1,4 @@
-import { component } from "react";
+import { Component } from "react";
 
 class ClassInputCount extends Component {
     constructor(props) {
@@ -9,7 +9,7 @@ class ClassInputCount extends Component {
 
     render() {
         return (
-        <h4> Todo Count: {this.state.todos.length} </h4>
+        <h4> Todo Count: {this.props.count} </h4>
         );
     }
 }

@@ -63,7 +63,7 @@ class ClassInput extends Component {
             </li>           
           ))}
         </ul>
-        <ClassInputCount todos={this.state.todos} />
+        <ClassInputCount count={this.state.todos.length} />
       </section>
     );
   }
