@@ -9,7 +9,7 @@ class ClassInputCount extends Component {
 
     render() {
         return (
-        <h4> Todo Count: {this.state.todos.length } </h4>
+        <h4> Todo Count: {this.state.todos.length} </h4>
         );
     }
 }

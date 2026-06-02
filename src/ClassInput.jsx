@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./App.css";
+import ClassInputCount from "./ClassInputCount.jsx";
 
 class ClassInput extends Component {
   constructor(props) {
@@ -62,6 +63,7 @@ class ClassInput extends Component {
             </li>           
           ))}
         </ul>
+        <ClassInputCount todos={this.state.todos} />
       </section>
     );
   }
