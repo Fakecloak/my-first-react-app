@@ -14,6 +14,7 @@ class ClassInput extends Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
   }
 
   handleInputChange(e) {
@@ -26,7 +27,7 @@ class ClassInput extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.setState((state) => ({
-      todos: state.todos.concat(state.inputVal),
+      todos: state.todos.concat({ text: state.inputVal, isEditing: false }),
       inputVal: "",
     }));
   }
@@ -41,6 +42,20 @@ class ClassInput extends Component {
     this.setState((state) => ({
       todos:state.todos.filter( (currentTodo, currentIndex) => currentIndex !== index )
     }))
+  }
+
+  handleEdit(indexToEdit) {
+
+    const updatedTodos = this.state.todos.map( 
+      (todo, currentIndex) => {
+        if (currentIndex === indexToEdit) {
+          return { ...todo, isEditing: !todo.isEditing };
+        }
+        return todo;
+      }
+    );
+
+    this.setState({ todos: updatedTodos });
   }
 
   render() {
@@ -62,9 +77,18 @@ class ClassInput extends Component {
         <ul>
           {this.state.todos.map((todo,index) => (
             <li key={index}>
-              {todo}
+              {todo.isEditing ? (
+                <input type="text" value={todo.text} />
+
+              ): (
+                <span>{todo.text}</span>
+              )}
+              
               <button className="delete-btn" onClick={() => this.handleDelete(index)}>
                 Delete
+              </button>
+              <button className="edit-btn" onClick={() => this.handleEdit(index)}>
+                {todo.isEditing ? "Save" : "Edit"}
               </button>
             </li>           
           ))}
