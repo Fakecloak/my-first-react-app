@@ -1,4 +1,5 @@
 import { Component } from "react";
+import "./App.css";
 
 class ClassInput extends Component {
   constructor(props) {
@@ -55,7 +56,9 @@ class ClassInput extends Component {
           {this.state.todos.map((todo) => (
             <li key={todo}>
               {todo}
-              <button onClick={() => this.handleDelete(todo)}>Delete</button>
+              <button className="delete-btn" onClick={() => this.handleDelete(todo)}>
+                Delete
+              </button>
             </li>           
           ))}
         </ul>

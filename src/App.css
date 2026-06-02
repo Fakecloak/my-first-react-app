@@ -85,3 +85,13 @@ img {
     height: 100px;
     border-radius: 50%;
 }
+
+.delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width:5rem;
+}
