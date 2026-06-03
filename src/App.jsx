@@ -27,6 +27,7 @@ import ClassInput from './ClassInput.jsx'
 function App() {
   return (
     <>
+      <h1>Our First Test</h1>
       {/* <Profile /> */}
       {/* <List /> */}
       {/* <RecipeList /> */}
@@ -46,7 +47,7 @@ function App() {
       {/* <TodoList2 /> */}
       {/* <EditContact /> // error because of missing props, but I want to keep it for now  */}
       {/* <Form /> */}
-      <ClassInput name="Class Input" />
+      {/* <ClassInput name="Class Input" /> */}
       
     </>
   )
