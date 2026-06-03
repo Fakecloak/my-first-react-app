@@ -5,19 +5,18 @@ import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from './React-Router/Home.jsx'
 import Profile from './React-Router/Profile.jsx';
-import Popeye from './React-Router/Popeye.jsx';
-import Spinach from './React-Router/Spinach.jsx';
-import DefaultProfile from './React-Router/DefaultProfile.jsx';
+import ErrorPage from './React-Router/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path : "/",
-    element : <Home />
+    element : <Home />,
+    errorElement: <ErrorPage />,
   },
   {
-    path : "profile",
+    path : "profile/:name",
     element : <Profile />,
-    children : [
+    /* children : [
       { index: true, //default child route for profile
         element: <DefaultProfile /> 
       },
@@ -29,7 +28,7 @@ const router = createBrowserRouter([
         path : "spinach",
         element : <Spinach />
       },
-    ]
+    ] */
   },
 ]);
 
