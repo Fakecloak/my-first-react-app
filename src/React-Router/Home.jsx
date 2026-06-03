@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 const Home = () => {
   return (
     <div>
@@ -6,7 +8,7 @@ const Home = () => {
       <nav>
         <ul>
           <li>
-            <a href="profile">Profile page</a>
+            <Link to="profile">Profile page</Link>
           </li>
         </ul>
       </nav>
@@ -14,4 +16,4 @@ const Home = () => {
   );
 };
 
-export default App;
+export default Home;
